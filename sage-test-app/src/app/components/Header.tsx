@@ -1,4 +1,6 @@
 import {
+  AppBar,
+  AppBarProps,
   Box,
   Button,
   Container,
@@ -6,22 +8,36 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { FC, forwardRef } from "react";
 
-const Header = () => {
+export type HeaderProps = AppBarProps;
+
+const Header: FC<HeaderProps> = forwardRef(({ children, ...rest }, ref) => {
   return (
-    <Box
-      component="header"
+    <AppBar
+      {...rest}
+      ref={ref}
+      className=".mui-fixed"
       sx={{
-        width: "100%",
-        position: "fixed",
-        top: 15,
-        left: 0,
-        right: 0,
+        position: "sticky",
+        backgroundColor: "background.default",
+        alignSelf: "center",
+        paddingBottom: 10,
+        paddingTop: 5,
+        boxShadow: "none",
+        paddingRight: "0 !important", // Hack to avoid header shifting with Mui adding 20px padding if popovers are open
+        ...rest.sx,
       }}
     >
       <Container>
-        <Stack direction="row" justifyContent={"space-between"}>
-          <Typography variant="h5">
+        <Stack
+          direction="row"
+          sx={{
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography variant="h5" color={"#161C2D"}>
             <b>Brainwave.io</b>
           </Typography>
           <Stack direction="row" spacing={2}>
@@ -79,9 +95,10 @@ const Header = () => {
             </Box>
           </Stack>
         </Stack>
+        {children}
       </Container>
-    </Box>
+    </AppBar>
   );
-};
+});
 
 export default Header;
