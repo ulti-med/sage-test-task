@@ -47,10 +47,10 @@ const Footer = () => {
           container
           spacing={2}
           justifyContent={"space-around"}
-          sx={{ paddingY: 8 }}
+          sx={{ paddingY: 5 }}
         >
           <Grid item xs={12} sm={2}>
-            <Typography variant="body1" color="#0f3c4c" sx={{ pb: 2 }}>
+            <Typography variant="body1" color="grey" sx={{ pb: 2 }}>
               Company
             </Typography>
             <Link href="#" color="inherit" underline="none">
@@ -67,7 +67,7 @@ const Footer = () => {
             </Link>
           </Grid>
           <Grid item xs={12} sm={2}>
-            <Typography variant="body1" color="#0f3c4c" sx={{ pb: 2 }}>
+            <Typography variant="body1" color="grey" sx={{ pb: 2 }}>
               Product
             </Typography>
             <Link href="#" color="inherit" underline="none">
@@ -87,7 +87,7 @@ const Footer = () => {
             </Link>
           </Grid>
           <Grid item xs={12} sm={2}>
-            <Typography variant="body1" color="#0f3c4c" sx={{ pb: 2 }}>
+            <Typography variant="body1" color="grey" sx={{ pb: 2 }}>
               Services
             </Typography>
             <Link href="#" color="inherit" underline="none">
@@ -104,7 +104,7 @@ const Footer = () => {
             </Link>
           </Grid>
           <Grid item xs={12} sm={2}>
-            <Typography variant="body1" color="#0f3c4c" sx={{ pb: 2 }}>
+            <Typography variant="body1" color="grey" sx={{ pb: 2 }}>
               Legal
             </Typography>
             <Link href="#" color="inherit" underline="none">
@@ -118,7 +118,7 @@ const Footer = () => {
             </Link>
           </Grid>
           <Grid item xs={12} sm={2}>
-            <Typography variant="body1" color="#0f3c4c" sx={{ pb: 2 }}>
+            <Typography variant="body1" color="grey" sx={{ pb: 2 }}>
               Contact us
             </Typography>
             <Link href="#" color="inherit" underline="none">
